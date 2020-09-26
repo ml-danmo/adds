@@ -1,0 +1,18 @@
+@import './var.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+img{
+    display: block;
+}
+a{
+    color: $initColor;
+}
+h1,h2,h3,h4{
+    font-size: $initColor;
+}

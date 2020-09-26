@@ -1,0 +1,43 @@
+@import './var.scss';
+@import './common.scss';
+
+
+
+#banner{
+    $banH:500px;
+    .banner_imgs{
+        height: $banH;
+        li{
+            height: $banH;
+            width: 100%;
+            opacity: 0;
+            transition: 0.5s;
+            @include pos;
+            &.show{
+                opacity: 1;
+                z-index: 2;
+            }
+            img{
+                @include wh100;
+            }
+        }
+        
+    }
+    .banner_dots{
+        position: absolute;
+        bottom: 20px;
+        right: 100px;
+        z-index: 3;
+        li{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            float: left;
+            margin: 5px;
+            background: salmon;
+            &.active{
+                background: greenyellow;
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+@import './modules/common.scss';
+@import './modules/reset.scss';
+@import './modules/var.scss';
+@import './modules/foot.scss';
+@import './modules/head.scss';
+@import './modules/banner.scss';
+
+#mit{
+    height: 40px;
+    text-align: center;
+    width: 100%;
+    border-bottom: #ccc solid 1px;
+    line-height:40px;
+    span{
+        margin: 0 50px;
+    }
+}
+#top{
+    .nav{
+        line-height: 54px;
+        span{
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #000;
+            color: #fff;
+            display: inline-block;
+            line-height: 14px;
+            text-align: center; 
+            margin-right: 5px;
+        }
+        i{
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #000;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        strong{
+            margin: 0 5px;
+            font-weight: 500;
+        }
+    }
+    p{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}
+
+#wrap{
+    /* 左边侧边栏 */
+    #sidebar{
+        width: 230px;
+        height: 1000px;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+        
+    }
+    /* 右边商品列表 */
+    #goodsList{
+        width: 950px;
+        /* 筛选 */
+        .filt{
+            height: 50px;
+            width: 950px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .order{
+                width: 200px;      
+                line-height: 50px;
+                border: 1px solid #ccc;
+                padding: 0 10px;
+                box-sizing: border-box;
+                margin-left: 10px;
+            }
+            .num{
+                span{
+                    margin: 5px;
+                }
+            }
+            .page{
+                span{
+                    margin: 5px;
+                }
+                .page-num{
+                    display: inline-block;
+                    height: 50px;
+                    width: 80px;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    box-sizing: border-box;
+                    line-height: 30px;
+                }
+                .btn{
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    background-color: #c8cbcc;
+                    text-align: center;
+                    line-height: 20px;
+                    color: #999;
+                }
+            }
+        }
+        /* 商品列表 */
+        .list{
+            margin-top: 30px;
+            li{
+                width: 230px;
+                margin-left: 10px;       
+                .pic{
+                    width: 230px;
+                    height: 230px;
+                    img{
+                        @include wh100;
+                    }
+                }
+                .smallImg{
+                    background: #eceef0;
+                    line-height:100px ;
+                    li{
+                        float: left;
+                        width: 80px;
+                        height: 80px;
+                        border-bottom: 2px solid #000;
+                        img{
+                            @include wh100;
+                        }
+                    }
+                }
+                .goodsType{
+                    font-size: 12px;
+                    line-height: 34px;
+                    color: #888;
+                }
+                .goodsName{
+                    height: 40px;
+                    padding-right: 10px;
+                    font-size: 14px;
+                    color: #000;
+                    line-height: 16px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .goodsPrice{
+                    font-size: 14px;
+                    
+                    margin-bottom: 18px;
+                    span:first-of-type{
+                        color: #c53622;
+                    }
+                    span:last-of-type{
+                        color: #c53622;
+                    }
+                }
+            }
+        }
+    }
+}

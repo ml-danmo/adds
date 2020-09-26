@@ -1,0 +1,18 @@
+{
+    "type":"banner",
+    "code":0,
+    "banner_list":[
+        {
+            "imgUrl":"https://img.adidas.com.cn/resources/2020kvbanner/sep/SUPERSTAR/kv-pc(14).jpg",
+            "imgLink":"#"
+        },
+        {
+            "imgUrl":"https://img.adidas.com.cn/resources/2020kvbanner/sep/SUPERSTAR/kv-pc(15).jpg",
+            "imgLink":"#"
+        },
+        {
+            "imgUrl":"https://img.adidas.com.cn/resources/2020kvbanner/OCT/sale/kv-pc-w.jpg",
+            "imgLink":"#"
+        }
+    ]
+}

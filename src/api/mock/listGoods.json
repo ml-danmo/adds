@@ -1,0 +1,30 @@
+{
+    "goods_list":[
+        {
+            "goodsImg":["https://img.adidas.com.cn/resources/2020/7/30/15960434570264222.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff","https://img.adidas.com.cn/resources/2020/7/30/15960434574153450.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff"],
+            "goodsId":"",
+            "goodsPrice_now":279 ,
+            "goodsPrice_old":399 ,
+            "goodsColor":["白(GP5871)","洋红(GP5872)"],
+            "goodsType":"女子  adidas neo  ",
+            "goodsName":"ADIDAS NEO W CS SWEAT 运动卫衣",
+            "goodsinfo":""
+
+        },
+        {
+            "goodsImg":
+                {
+                    "listImg":[],
+                    "detailImg":[]
+                } ,
+            "goodsId":"",
+            "goodsPrice_now":2 ,
+            "goodsPrice_old":2 ,
+            "goodsColor":[],
+            "goodsType":"女子  adidas neo  ",
+            "goodsName":"",
+            "goodsinfo":""
+
+        }
+    ]
+}

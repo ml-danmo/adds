@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/list.css">
+    <script src="/lib/require.js" data-main="/js/list.js"></script>
+</head>
+<body>
+    @include('head.html')
+    @include('banner.html')
+
+   
+    <p id="mit"><span>全场免运费</span><span>尊享当日达、次日达、次晨达</span> </p>
+    <div id="top"  class="container">
+        <div class="nav">
+            <span><</span> 
+            <a href="">返回</a> <strong>|</strong>
+            <a href="">首页</a>
+            <i></i>
+            <a href="">女子</a>
+            <i></i>
+            <a href="">女子服饰类</a>
+            <i></i>
+            <a href="">卫衣/毛衫</a>
+        </div>
+        <p> [ 女子卫衣/帽衫93件商品 ]</p>
+    </div>
+    <div id="wrap" class="container clear">
+        <!-- 左边侧边栏 -->
+        <div id="sidebar" class="fl">
+
+        </div>
+        <!-- 右边商品列表 -->
+        <div id="goodsList" class="fr">
+           <!--  筛选 -->
+            <div class="filt">
+                <div class="order">请选择排序方式</div>
+                <div class="num">
+                    <span>显示</span>
+                    <span><a href="">48</a></span>
+                    <span>|</span>
+                    <span>120</span>
+                </div>
+                <div class="page">
+                    <span>页数</span>
+                    <div class="page-num">1</div>
+                    <span>/ 1</span>
+                    <div class="btn"><</div>
+                    <div class="btn">></div>
+                </div>
+            </div>
+            <!-- 商品列表 -->
+            <ul class="list">
+                <li>
+                    <div class="pic">
+                        <a href="">
+                            <img src="https://img.adidas.com.cn/resources/2019/12/4/1575456969768777.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff" alt="">
+                        </a>
+                    </div>
+                    <ul class="smallImg clear">
+                        <li><img src="https://img.adidas.com.cn/resources/2019/12/26/15773588897648894.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff" alt=""></li>
+                        <li><img src="https://img.adidas.com.cn/resources/2019/12/26/15773588901732808.jpg?x-oss-process=image/resize,m_pad,w_230,h_230,limit_0,color_ffffff" alt=""></li>
+                    </ul>
+                    <div class="goodsType">  女子  ORIGINALS    </div>
+                    <div class="goodsName"> CROPPED FLEECE 运动卫衣   </div>
+                    <div class="goodsPrice">  
+                        <span> ¥899 </span> <span>  </span>
+                    </div>
+                    <div>⭐⭐⭐⭐⭐ 13</div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    @include('foot.html')
+</body>
+</html>

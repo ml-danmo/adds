@@ -1,0 +1,9 @@
+@import './var.scss';
+.logo-foot{
+    height: 200px;
+    background: $initColor;
+    color: red;
+    img{
+        width:100px;
+    }
+}
