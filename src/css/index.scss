@@ -7,3 +7,82 @@
 @import './modules/head.scss';
 @import './modules/banner.scss';
 
+
+.bigI{
+    width: 100%;
+    height: 460px;
+    position: relative;
+    img{
+        @include wh100;
+    }
+    a{
+        height: 48px;
+        position: absolute;
+        top: auto;
+        line-height: 48px;
+        display: block;
+        color: #000;
+        background-color: #fff;
+        padding-left: 20px;
+        box-sizing: border-box;
+        
+        strong{
+            font-size: 30px;
+            margin-left: 20px;
+            display: inline-block;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+    }
+    .chose{
+        width: 190px;
+        left:520px;
+        top:250px
+    }
+    .moreKnow{
+        width: 160px;
+        left:540px;
+        top:320px
+    }
+}
+#shoseShow{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    ul{
+        li{
+            float: left;
+            width: 297px;
+            text-align: center;
+            
+            
+            div{
+                width: 298px;
+                height: 140px;
+                margin-bottom: 40px;
+                img{
+                    @include wh100;
+                }
+            }
+            p{
+                line-height: 32px;
+                text-decoration: underline;
+            }
+            &:hover{
+                border: #ccc solid 1px;
+            }
+        }
+    }
+}
+
+.bigI{
+    .jump{
+        a{ 
+            color: #fff;
+            background-color: #000;
+        }
+        .cc{
+            width: 158px;
+            left: 540px;
+        }
+    }
+}

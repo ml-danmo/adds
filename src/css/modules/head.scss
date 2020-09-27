@@ -1,6 +1,78 @@
-.logo{
-   
-    img{
-        width: 30px;
+@import './common.scss';
+#headFluid{
+    background-color: #000;
+}
+#head{
+    background-color: #000;
+    .top{
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        a{
+            margin: 0 20px;
+            color: #c8cbcc;
+            font-size: 12px;
+        }
+    }
+    .nav{
+        height: 60px;
+        width: 100%;
+        .left{
+            .logo{
+                width: 66px;
+                height: 44px;
+                display: inline-block;
+
+                margin-right: 10px;
+                img{
+                    @include wh100;
+                }
+              }
+              ul{
+                  display: inline-block;
+                  li{
+                      padding: 0 15px;
+                      font-size: 18px;                     
+                      float: left;
+                      color: #fff;
+                      a{
+                        color: #fff;
+                      }
+                  }
+              }
+        }
+        .right{
+            margin-left: 60px;
+            margin-top: 8px;
+            .search{
+                display: inline-block;
+                width: 180px;
+                height: 20px;
+                background-color: #fff;
+                padding: 9px 0 0;
+                position: relative;
+                margin: auto;
+                span{
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                }
+                input{
+                    color: #000;
+                    width: 100px;
+                    position: absolute;
+                    top: 8px;
+                    left: 30px;
+                    outline: none;
+                    border: none;
+                }
+            }
+            .cart{
+                display: inline-block;
+                margin-right: 20px;
+                text-align: center;
+                font-size: 20px;
+            }
+        }
     }
 }

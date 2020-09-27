@@ -1,8 +1,10 @@
 @import './var.scss';
 .clear:after{
     content: "";
-    display: block;
     clear: both;
+    display: block; 
+    height: 0;
+    visibility: hidden;
 }
 .fl{
     float: left;
@@ -17,6 +19,7 @@
 }
 .container-fluid{
     position: relative;
+    width: 100%;
 }
 
 @mixin wh100{

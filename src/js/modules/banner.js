@@ -2,16 +2,13 @@
 
 
 define(['jquery'],function($){
-
-
-    function initBanner(data){
-       
+    function initBanner(data){  
         init(data);
         bind();
     }
 
     function init(data){
-        console.log(data)
+       // console.log(data)
         var tmp=`
             <ul class="banner_imgs">
                 ${data.map((v,i,a)=>{

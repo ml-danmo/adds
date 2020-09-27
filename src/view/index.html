@@ -3,15 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>首页</title>
     <link rel="stylesheet" href="/css/index.css">
     <script src="/lib/require.js" data-main="/js/index.js"></script>
 </head>
 <body>
     @include('head.html')
-    @include('banner.html')
 
-    <div class="container" id="s">首页</div>
+    <div class="bigI">
+        <img src="https://img.adidas.com.cn/resources/2020kvbanner/aug/%E8%BF%90%E5%8A%A8/resize-KV-PC-1920x720-N0803b.jpg" alt="">
+        <a href="" class="chose"><span>选 购 少 年 同 款</span>  <strong> → </strong></a>
+        <a href="" class="moreKnow"><span>了 解 更 多</span> <strong> → </strong></a>
+    </div>
+
+    @include('banner.html');
+
+    <div id="shoseShow" class="container">
+        <ul class="clear">
+            <li>
+                <a href=""><div><img src="https://img.adidas.com.cn/resources/2020kvbanner/sep/OZ/15986227074875882.png?version=000000%20?version=000000" alt=""></div></a>
+                <a href=""><p>ozweego</p></a>
+            </li>
+            <li>
+                <a href=""><div><img src="https://img.adidas.com.cn/resources/2020kvbanner/feb/superstar-silos-01.png?version=000000" alt=""></div></a>
+                <a href=""><p>ozweego</p></a>
+            </li>
+            <li>
+                <a href=""><div><img src="https://img.adidas.com.cn/resources/2020kvbanner/Keysilo/FW4910_SLC_eCom.png?version=000000?version=000000" alt=""></div></a>
+                <a href=""><p>ozweego</p></a>
+            </li>
+            <li>
+                <a href=""><div><img src="https://img.adidas.com.cn/resources/2020kvbanner/Keysilo/G55838.png?version=000000" alt=""></div></a>
+                <a href=""><p>ozweego</p></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="bigI">
+        <img src="https://img.adidas.com.cn/resources/2020kvbanner/sep/winter/kv-pc2.jpg" alt="">
+        <div class="jump">
+            <a href="" class="chose cc"><span>立 即 选 购</span>  <strong> → </strong></a>
+            <a href="" class="moreKnow cc"><span>了 解 更 多</span> <strong> → </strong></a>
+        </div>
+    </div>
+
+    <!-- @include('banner.html') -->
+    <div id="banner" class="container-fluid">
+        <ul class="banner_imgs">
+            <li class="show"><a href="#"><img src="https://img.adidas.com.cn/resources/2020kvbanner/OCT/sale/kv-pc.jpg" alt=""></a></li>
+            <li><a href="#"><img src="https://img.adidas.com.cn/resources/2020kvbanner/OCT/sale/kv-pc-w.jpg" alt=""></a></li>
+        </ul>
+        <ol class="banner_dots">
+            <li class="active"></li>
+            <li></li>
+        </ol>
+    </div>
+
+    
+
+
+
+
+
+
 
     @include('foot.html')
 </body>
