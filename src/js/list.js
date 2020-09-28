@@ -18,29 +18,29 @@ define(['jquery' , '../api/server','./modules/banner',] ,function($ ,{ getBanner
 
 
     function initGoodsList(data){
-        
         var tmp = data.map(function(v,i,a){
-           // var goodsImg = JSON.parse(v.goodsImg)[0];
+           var goodsImg = v.goodsImg.split(",")[0].replace(`["`,"");
+           var goodsImg = goodsImg.slice(0,goodsImg.indexOf("?"))
             return `<li >
                         <div class="pic">
                             <a href="">
-                                <img src="" alt="">
+                                <img src="${goodsImg}" alt="">
                             </a>
                             <div class="see">快速查看</div>
                         </div>
                         <div class="goodsContent">
                             <ul class="smallImg ">
-                                <li>12312321<a href=""><img src="" alt=""></a></li>
-                                <li><a href=""><img src="" alt=""></a></li>
+                                <li><a href=""><img src="${goodsImg}" alt=""></a></li>
+                                <li><a href=""><img src="${goodsImg}" alt=""></a></li>
                             </ul>
                             <a href="">
                                 <div class="goodsType">${v.goodsType}</div>
                                 <div class="goodsName">${v.goodsName}</div>
                                 <div class="goodsPrice">  
-                                    <span>${v.goodsNPrice}</span> <span>${v.goodsOPrice}</span>
+                                    <span>￥${v.goodsNPrice}</span> <span>￥${v.goodsOPrice}</span>
                                 </div>
                             </a>
-                            <div>⭐⭐⭐⭐⭐ 13</div>
+                            <div class="start">⭐⭐⭐⭐⭐ 13</div>
                         </div>
                     </li> `;
             }).join('');

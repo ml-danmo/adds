@@ -9,15 +9,15 @@
 </head>
 <body>
     @include('head.html')
-
+    <!-- 大背景图 -->
     <div class="bigI">
         <img src="https://img.adidas.com.cn/resources/2020kvbanner/aug/%E8%BF%90%E5%8A%A8/resize-KV-PC-1920x720-N0803b.jpg" alt="">
-        <a href="" class="chose"><span>选 购 少 年 同 款</span>  <strong> → </strong></a>
-        <a href="" class="moreKnow"><span>了 解 更 多</span> <strong> → </strong></a>
+        <a href="" class="chose pons"><span>选 购 少 年 同 款</span>  <strong> → </strong></a>
+        <a href="" class="moreKnow pons"><span>了 解 更 多</span> <strong> → </strong></a>
     </div>
 
     @include('banner.html');
-
+    <!-- 第二个轮播 -->
     <div id="shoseShow" class="container">
         <ul class="clear">
             <li>
@@ -42,12 +42,12 @@
     <div class="bigI">
         <img src="https://img.adidas.com.cn/resources/2020kvbanner/sep/winter/kv-pc2.jpg" alt="">
         <div class="jump">
-            <a href="" class="chose cc"><span>立 即 选 购</span>  <strong> → </strong></a>
-            <a href="" class="moreKnow cc"><span>了 解 更 多</span> <strong> → </strong></a>
+            <a href="" class="chose cc pons"><span>立 即 选 购</span>  <strong> → </strong></a>
+            <a href="" class="moreKnow cc pons"><span>了 解 更 多</span> <strong> → </strong></a>
         </div>
     </div>
 
-    <!-- @include('banner.html') -->
+    @include('banner.html')
     <div id="banner" class="container-fluid">
         <ul class="banner_imgs">
             <li class="show"><a href="#"><img src="https://img.adidas.com.cn/resources/2020kvbanner/OCT/sale/kv-pc.jpg" alt=""></a></li>
@@ -59,14 +59,281 @@
         </ol>
     </div>
 
-    
+    <div id="twoImg" class="twoImg container clear bigI">
+        <div class="pic1 pic">
+            <a href=""><img src="https://img.adidas.com.cn/resources/2020kvbanner/sep/rose11/feature-pc(28).jpg" alt=""></a>
+            <a href="" class="moreKnow cc pons"><span>了 解 更 多</span> <strong> → </strong></a>
+        </div>
+        <div class="pic2 pic">
+            <a href=""><img src="https://img.adidas.com.cn/resources/2020kvbanner/sep/dame7/feature-pc2.jpg" alt=""></a>    
+                <a href="" class="chose cc pons"><span>立 即 选 购</span>  <strong> → </strong></a>
+        </div>
+    </div>
+    <!-- 鞋子的大背景展示 -->
+    <div class="bigI bgshose" id="bgshose">
+        <img src="https://img.adidas.com.cn/resources/2020kvbanner/sep/OZ/KV/kv-pc(8).jpg" alt="">
+        <div class="jump">
+            <a href="" class="chose cc pons"><span>立 即 选 购</span>  <strong> → </strong></a>
+            <!-- <a href="" class="moreKnow cc pons" id="moreKnow"><span>了 解 更 多</span> <strong> → </strong></a> -->
+        </div>
+    </div>
+    <!-- 最近浏览-轮播图 -->
+    <h2 class="title_ container">最近浏览</h2>
+    <div class="banners container" id="banner_1">
+        <ul class="banner_imgs clear">
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2019/12/4/15754569695768022.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2019/12/4/15754569695768022.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2019/12/4/15754569695768022.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2019/12/4/15754569695768022.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2019/12/4/15754569695768022.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2019/12/4/15754569695768022.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+        </ul>
+        <ol class="banner_dots">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <button class="btn leftBtn"><</button>
+        <button class="btn rightBtn">></button>
+    </div>
+    <!-- 本周热卖-轮播图 -->
+    <h2 class="title_ container">本周热卖</h2>
+    <div class="banners container" id="banner_2">
+        <ul class="banner_imgs clear">
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/8/28/15986220357788733.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">OZWEEGO经典运动鞋</p></a>
+                    <span>￥1099</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/8/28/15986220357788733.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/5/28/15906666351022888.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">SUPEEERSTAR PRIDE 经典运动鞋</p></a>
+                    <span>￥899</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/8/28/15986220357788733.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/8/28/15986220357788733.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2019/12/23/15770958246201610.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">adidas neo PLAY9TIS 2.0 Disney米老鼠联名款休闲运动鞋</p></a>
+                    <span>￥899</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/8/28/15986220357788733.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/8/28/15986220357788733.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+            <li>
+                <div class="pic"><a href="#"><img src="https://img.adidas.com.cn/resources/2020/3/31/15856442445192996.jpg?x-oss-process=image/resize,m_pad,w_324,h_324,limit_0,color_ffffff" alt=""></a></div>
+                <div class="info">
+                    <a href=""><p class="title">HOODIE运动套头衫</p></a>
+                    <span>￥349</span>
+                </div>
+            </li>
+        </ul>
+        <ol class="banner_dots">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <button class="btn leftBtn"><</button>
+        <button class="btn rightBtn">></button>
+    </div>
 
 
 
 
-
-
-
+    <!-- 尾部 -->
     @include('foot.html')
 </body>
 </html>

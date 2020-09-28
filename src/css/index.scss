@@ -7,7 +7,7 @@
 @import './modules/head.scss';
 @import './modules/banner.scss';
 
-
+/* 大背景图 */
 .bigI{
     width: 100%;
     height: 460px;
@@ -15,7 +15,7 @@
     img{
         @include wh100;
     }
-    a{
+    .pons{
         height: 48px;
         position: absolute;
         top: auto;
@@ -36,15 +36,16 @@
     }
     .chose{
         width: 190px;
-        left:520px;
-        top:250px
+        left:38%;
+        top:55%;
     }
     .moreKnow{
         width: 160px;
-        left:540px;
-        top:320px
+        left:40%;
+        top:70%;
     }
 }
+/* 第二个轮播 */
 #shoseShow{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -68,21 +69,141 @@
                 text-decoration: underline;
             }
             &:hover{
-                border: #ccc solid 1px;
+                box-shadow:1px 1px 1px 1px #ccc;
             }
         }
     }
 }
 
 .bigI{
-    .jump{
-        a{ 
-            color: #fff;
-            background-color: #000;
+    .cc{
+        width: 158px;
+        left: 40%;
+        color: #fff;
+        background-color: #000;
+    }
+}
+
+.twoImg{
+    height: 400px;
+    padding:20px 0 ;
+    width: 1200px;
+    margin: auto;
+    .pic{
+        float: left;
+        width: 580px;
+        height: 395px;
+        position: relative;
+        margin: 0 10px;
+        &:hover{
+            box-shadow:3px 3px 3px 3px #ccc;
         }
-        .cc{
-            width: 158px;
-            left: 540px;
+       
+        img{
+            @include wh100;
+        }
+        .moreKnow{
+            left: 240px;
+        }
+        .chose{
+            left: 200px;
+            top: 320px;
         }
     }
 }
+/* 鞋子的大背景展示 */
+#bgshose{
+    position: relative;
+    .chose{
+        left: 80%;
+        top: 60%;
+        #moreKnow{
+            left: 80%;
+            top: 70%;
+            position: absolute;
+        }
+    }
+}
+.title_{
+    font-size: 28px;
+    color: #000;
+    line-height: 50px;
+}
+/* 最近浏览-轮播图 */
+.banners{
+    position: relative;
+    height: 430px;
+    overflow: hidden;
+    .banner_imgs{
+        position: absolute;
+        width: 4784px; 
+        z-index: 2;
+        li{
+            width: 289px;
+            margin: 20px 5px;
+            float: left;
+           
+            &:hover{
+                /* border: solid 1px #ccc; */
+                box-shadow:3px 3px 3px 3px #ccc;
+            }
+            .pic{
+                width: 289px;
+                height: 289px;
+                img{
+                    @include wh100;
+                }
+            }
+            .info{
+                width: 289px;
+                height: 90px;
+                padding: 12px 15px 19px;
+                font-size: 12px;
+                box-sizing: border-box;
+                .title{
+                    height: 40px;
+                }
+            }
+            
+        }
+    }
+    .banner_dots{
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%,0);
+        z-index: 5;
+        height: 10px;
+        li{
+            width: 28px;
+            height:3px;
+            background: #000;
+            float: left;
+            margin:0 6px;
+            &:hover{
+                height: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+    .btn{
+        position: absolute;
+        top: 40%;
+        transform: translate(-50%,-50%);
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        outline: none;
+        color: #ccc;
+        z-index: 8;
+    }
+    .leftBtn{
+        left: 20px;
+    }
+    .rightBtn{
+        right: 0px;
+    }
+}
+
+
+
