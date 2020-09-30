@@ -19,29 +19,27 @@ define(['jquery' , '../api/server','./modules/banner',] ,function($ ,{ getBanner
 
     function initGoodsList(data){
         var tmp = data.map(function(v,i,a){
-           var goodsImg = v.goodsImg.split(",")[0].replace(`["`,"");
-           var goodsImg = goodsImg.slice(0,goodsImg.indexOf("?"))
+        //    var goodsImg = v.goodsImg.split(",")[0].replace(`["`,"");
+        //    var goodsImg = goodsImg.slice(0,goodsImg.indexOf("?"))
             return `<li >
-                        <div class="pic">
-                            <a href="">
-                                <img src="${goodsImg}" alt="">
-                            </a>
-                            <div class="see">快速查看</div>
-                        </div>
-                        <div class="goodsContent">
-                            <ul class="smallImg ">
-                                <li><a href=""><img src="${goodsImg}" alt=""></a></li>
-                                <li><a href=""><img src="${goodsImg}" alt=""></a></li>
-                            </ul>
-                            <a href="">
-                                <div class="goodsType">${v.goodsType}</div>
-                                <div class="goodsName">${v.goodsName}</div>
-                                <div class="goodsPrice">  
-                                    <span>￥${v.goodsNPrice}</span> <span>￥${v.goodsOPrice}</span>
-                                </div>
-                            </a>
-                            <div class="start">⭐⭐⭐⭐⭐ 13</div>
-                        </div>
+                        <a href="http://localhost:4000/view/detail.html?name=${v.goodsName}&id=${v.goodsId}"  target="blank">
+                            <div class="pic">                               
+                                    <img src="${goodsImg}" alt="">                             
+                                <div class="see">快速查看</div>
+                            </div>
+                            <div class="goodsContent">
+                                <ul class="smallImg ">
+                                    <li><img src="${goodsImg}" alt=""></li>
+                                    <li><img src="${goodsImg}" alt=""></li>
+                                </ul>                                
+                                    <div class="goodsType">${v.goodsType}</div>
+                                    <div class="goodsName">${v.goodsName}</div>
+                                    <div class="goodsPrice">  
+                                        <span>￥${v.goodsNPrice}</span> <span>￥${v.goodsOPrice}</span>
+                                    </div>                             
+                                <div class="start">⭐⭐⭐⭐⭐ 13</div>
+                            </div>
+                        </a>
                     </li> `;
             }).join('');
         $("#goodsList .list").html(tmp);
