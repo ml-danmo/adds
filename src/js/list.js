@@ -21,6 +21,7 @@ define(['jquery' , '../api/server','./modules/banner',] ,function($ ,{ getBanner
         var tmp = data.map(function(v,i,a){
         //    var goodsImg = v.goodsImg.split(",")[0].replace(`["`,"");
         //    var goodsImg = goodsImg.slice(0,goodsImg.indexOf("?"))
+        var goodsImg = JSON.parse(v.goodsImg)[0];
             return `<li >
                         <a href="http://localhost:4000/view/detail.html?name=${v.goodsName}&id=${v.goodsId}"  target="blank">
                             <div class="pic">                               

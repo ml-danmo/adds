@@ -3,7 +3,8 @@ requirejs.config({                    //配置别名
         "jquery" : "../lib/jquery3.5.1"   // 起了个别名
     }
 })
-define(['jquery' , '../api/server','./modules/banner'] ,function($ ,{ getBannerData,getDetailData },initBanner){
+define(['jquery' , '../api/server','./modules/banner','./modules/storage'] ,function($ ,{ getBannerData,getDetailData },initBanner ,
+    {  addCartStorage}){
     getBannerData().then((res)=>{
         initBanner(JSON.parse(res))
     }).catch(()=>{});
@@ -11,20 +12,18 @@ define(['jquery' , '../api/server','./modules/banner'] ,function($ ,{ getBannerD
 
    var name= window.location.search.match(/name=([^&]+)/)[1];
    var id= window.location.search.match(/id=([^&]+)/)[1];
-   console.log(name)
-   console.log(id)
 
    getDetailData(id).then((res)=>{
-        //initdetail(res);
         console.log(res);
         initdetail(res);
+        //addcar(res);
     }).catch(()=>{});
 
 
     function initdetail(data){
         var goodsImg = JSON.parse(data.goodsImg);
         var goodsColor = JSON.parse(data.goodsColor);
-        console.log(goodsImg)
+        //console.log(goodsImg)
         //左侧导航li
         var tmp1 =goodsImg.map((v,i,a)=>{
             return  ` <li><img src="${v}" alt=""></li> `;
@@ -57,10 +56,12 @@ define(['jquery' , '../api/server','./modules/banner'] ,function($ ,{ getBannerD
                             <li><a href=""><img src="${goodsImg[1]}" alt=""></a></li>
                         </ul>
                         <p class="cha"> 👁‍🗨 <a href="">查看尺码对照表</a></p>
-                        <div class="code">选择尺码 <span>↓</span></div>
-                        <div class="num">选择尺码 <span>↓</span></div>
-                        <a href=""><div class="buy">立即购买 <span>→</span></div></a>
-                        <a href=""><div class="addcart">加入购物袋 <span>→</span></div></a>
+                        
+                        <input type="text" style="display: inline-block;" class="code" placeholder="选择尺码">
+                        <input type="text" style="display: inline-block;" class="num" placeholder="选择数量">
+                      
+                        <a href="http://localhost:4000/view/cart.html"><div class="buy">立即购买 <span>→</span></div></a>
+                        <a href="javascript:;"><div class="addcart">加入购物袋 <span>→</span></div></a>
                         <div class="free">
                             <a href="">该商品免运费 <span>💬√</span></a>
                             <a href="">在线客服 <span>💬</span></a>
@@ -75,9 +76,36 @@ define(['jquery' , '../api/server','./modules/banner'] ,function($ ,{ getBannerD
          //商品描述
             var tmp4 = `<h2 class="info-name">${data.goodsName}</h2>
                         <p class="info-describe">${data.goodsinfo}</p> `;
-            $('#goodsinfo .content').html(tmp4);          
-       
+            $('#goodsinfo .content').html(tmp4);    
 
+
+        fdj();     //放大镜 
+        addcar(data);
+    }
+
+
+    function addcar(data){
+        var goodsImg = JSON.parse(data.goodsImg);
+        var goodsColor = JSON.parse(data.goodsColor);
+        var $addcart =$('#wrap .pop .addcart');
+        $addcart.click(function(){
+            var datas = {
+                "check":true,
+                "img":goodsImg[0],
+                "name":data.goodsName,
+                "id":data.goodsId,
+                "type":data.goodsType,
+                "color":goodsColor[0],
+                "price":data.goodsNPrice,
+                "num":Number($('#wrap .pop .num').val()),
+                "code":Number($('#wrap .pop .code').val())
+            }
+
+
+            addCartStorage(datas,function(){
+                alert("添加成功");
+            })
+        })
     }
 
 });
@@ -85,13 +113,13 @@ define(['jquery' , '../api/server','./modules/banner'] ,function($ ,{ getBannerD
 
 
 
-fdj();
-function fdj(){
-    let small = document.querySelector("#wrap .smallbox");
-    let mask = small.querySelector("#wrap .smallbox .mask");
-    let big = document.querySelector("#wrap .bigbox");
-    let bigImg = big.querySelector("img");
 
+function fdj(){
+    let small = document.querySelector("#wrap .fdj .smallbox");
+    let mask = document.querySelector("#wrap .smallbox .mask");
+    let big = document.querySelector("#wrap .bigbox");
+    let bigImg = document.querySelector("#wrap .bigbox img");
+   
     small.onmouseover = function(){
         mask.style.display = 'block';
         big.style.display = 'block';

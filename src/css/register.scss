@@ -5,30 +5,89 @@
 @import './modules/foot.scss';
 @import './modules/head.scss';
 
-.nav{
-    line-height: 54px;
-    span{
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background-color: #000;
-        color: #fff;
-        display: inline-block;
-        line-height: 14px;
-        text-align: center; 
-        margin-right: 5px;
-    }
-    strong{
-        margin: 0 5px;
-        font-weight: 500;
+
+#top{
+    .nav{
+        line-height: 54px;
+        span{
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #000;
+            color: #fff;
+            display: inline-block;
+            line-height: 14px;
+            margin-right: 5px;
+        }
+        strong{
+            margin: 0 5px;
+            font-weight: 500;
+        }
     }
 }
 
-#regi{
-    width: 1000px;
-    margin: auto;
-    .left{
-        width: 48%;
-        border-right: solid 1px #ccc;
+#regist{
+    width: 382px;
+    padding-right: 164px;
+    border-right: 1px dashed #ccc;
+    .title{
+        font-size: 22px;
+        padding :0 0 14px 14px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #000;
+       
     }
+    #name,#pwd,.regi{
+        width: 382px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 10px;
+        box-sizing: border-box;display: block;
+    }
+    #pwd{
+        margin: 20px 0;
+    }
+    .regi{
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        margin: 20px 0;
+        font-size: 18px;
+        
+    }
+    .foget{
+        margin: 10px 0 20px 0;
+        a{
+            text-decoration: underline;
+        }
+    }
+    .otherLogin{
+        p{
+            padding: 20px 0; 
+            border-top: 1px dashed #ccc;
+        }
+        img{
+            display: inline-block;
+            width: 42px;
+            margin-left:10px ;
+        }
+    }
+    
+}
+
+#wrap{
+   .requity{
+       color: #000;
+       margin-left: 80px;
+       h3{
+           font-size: 18px;
+           margin-bottom: 20px;
+       }
+       ul{
+           margin: 40px 0 20px;
+           li{
+            margin-bottom: 11px;
+           }
+       }
+   }
 }

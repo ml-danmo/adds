@@ -7,6 +7,15 @@ define(['jquery'],function($){
      function getListData(){
          return $.ajax('/api3/list.php');
      }
+     function getLoginData(){
+         return $.ajax('/api3/login.php');
+     }
+     function getRegistertData(){
+         return $.ajax('/api3/register.php');
+     }
+     function getregion(){
+         return $.ajax('mock/address.json');
+     }
      function getDetailData(id){
          return new Promise((resolve,rej)=>{
                     $.ajax('/api3/detail.php').then((res)=>{
@@ -18,8 +27,7 @@ define(['jquery'],function($){
                                 resolve(res[i])
                             }
                         }
-                    })
-             
+                    })          
          })
          
      }
@@ -28,7 +36,11 @@ define(['jquery'],function($){
      return{
         getBannerData,
         getListData,
-        getDetailData
+        getregion,
+        getDetailData,
+        getLoginData,
+        getRegistertData,
+        
      }
 });
 

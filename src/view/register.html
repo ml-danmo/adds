@@ -5,21 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>注册</title>
     <link rel="stylesheet" href="/css/register.css">
+    <script src="/lib/require.js" data-main="/js/register.js"></script>
 </head>
 <body>
     @include('head.html')
 
-    <div class="nav">
-        <span><</span> 
-        <a href="">返回</a> <strong>|</strong>
-        <a href="">登录</a>
-        <a href="">| 注册</a>
-        <strong> / </strong>
-        <a href="">登录</a>
+    <div id="top">
+        <div class="nav container1">
+            <span></span> 
+            <a href="">返回</a> <strong>|</strong>
+            <a href="http://localhost:4000/view/login.html" target="blank">登录</a>
+            <a href="">| 注册</a>
+            <strong> / </strong>
+            <a href="">注册</a>
+        </div>
     </div>
-    <div id="regi" class="clear">
-        <div class="left fl">
-            <h2></h2>
+    <div id="wrap" class="container1 clear">
+        <div id="regist" class="fl">
+            <h2 class="title">账号密码注册</h2>
+            <div><input type="text" placeholder="手机号或邮箱" id="name"> <span> </span></div>
+            <div><input type="password" placeholder="密码" id="pwd"></div>
+            <div><input type="checkbox" id="check"> 记住我的信息</div>
+            <div class="regi">注册&nbsp; →</div>
+            <div class="foget">
+                <a href="">忘记密码?</a>
+            </div>
+            <div class="otherLogin">
+                <p>使用其他方式登录</p>
+                <img src="../static/img/login_03.png" alt="">
+                <img src="../static/img/login_05.png" alt="">
+                <img src="../static/img/login_07.png" alt="">
+            </div>
+        </div>
+        <div class="requity fl">
+            <h3>ADICLUB会员相关权益</h3>
+            <div>成为adiCLUB会员并完善个人信息，即可享受更多权益:</div>
+            <ul>
+                <li>√ 安全快捷支付订单</li>
+                <li>√ 随时跟踪订单状态</li>
+                <li>√ 即时收到打折优惠及新品发布信息</li>
+                <li>√ 全场免普通达运费和七天无理由退货服务</li>
+                <li>√ 消费即可获得积分，铜牌以上会员即可积分兑换优惠券</li>
+            </ul>
         </div>
     </div>
 
@@ -28,3 +55,22 @@
 
 </body>
 </html>
+<script src="../lib/jquery3.5.1.js"></script>
+<script>
+    $('#regist .regi').click(function(){
+        $.ajax({
+            url:"http://localhost:80/api3/register.php?name="+$("#name").val()+"&pwd="+$("#pwd").val(),
+            success(res){
+                if(res=='注册成功'){
+                    alert(res);
+                    location.href = 'http://localhost:4000/view/login.html';
+                }
+                else{
+                    alert(res);
+                    location.reload();
+                }
+                
+            }
+        })
+    })
+</script>
